@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.hoonProject.fileMapper">
+
+	<insert id="fileDelReq">
+		INSERT INTO WEB_FTP.FILE_DEL_LIST
+		(
+			FILE_NAME
+			, FILE_PATH
+			, DEL_YN
+		)
+		VALUES
+		(
+			#{file}
+			, #{path}
+			, "0"
+		)
+	</insert>
+
+<!-- 	<update id="fileDel"> -->
+<!-- 		UPDATE WEB_FTP.FILE_DEL_LIST -->
+<!-- 		   SET DEL_YN = "1" -->
+<!-- 		 WHERE FILE_PATH = #{path} -->
+<!-- 	</update> -->
+</mapper>
